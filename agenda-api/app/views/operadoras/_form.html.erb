@@ -1,0 +1,33 @@
+<%= form_for(@operadora) do |f| %>
+  <% if @operadora.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@operadora.errors.count, "error") %> prohibited this operadora from being saved:</h2>
+
+      <ul>
+      <% @operadora.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :categoria %><br>
+    <%= f.text_field :categoria %>
+  </div>
+  <div class="field">
+    <%= f.label :codigo %><br>
+    <%= f.number_field :codigo %>
+  </div>
+  <div class="field">
+    <%= f.label :preco %><br>
+    <%= f.text_field :preco %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

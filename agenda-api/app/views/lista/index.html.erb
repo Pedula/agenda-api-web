@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Lista</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>nomeOp</th>
+      <th>Telefone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lista.each do |listum| %>
+      <tr>
+        <td><%= listum.nomeOp %></td>
+        <td><%= listum.telefone %></td>
+        <td><%= link_to 'Show', listum %></td>
+        <td><%= link_to 'Edit', edit_listum_path(listum) %></td>
+        <td><%= link_to 'Destroy', listum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Listum', new_listum_path %>

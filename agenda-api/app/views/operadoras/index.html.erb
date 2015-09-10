@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Operadoras</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Categoria</th>
+      <th>Codigo</th>
+      <th>Preco</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @operadoras.each do |operadora| %>
+      <tr>
+        <td><%= operadora.nome %></td>
+        <td><%= operadora.categoria %></td>
+        <td><%= operadora.codigo %></td>
+        <td><%= operadora.preco %></td>
+        <td><%= link_to 'Show', operadora %></td>
+        <td><%= link_to 'Edit', edit_operadora_path(operadora) %></td>
+        <td><%= link_to 'Destroy', operadora, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Operadora', new_operadora_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @operadora.nome %>
+</p>
+
+<p>
+  <strong>Categoria:</strong>
+  <%= @operadora.categoria %>
+</p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @operadora.codigo %>
+</p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @operadora.preco %>
+</p>
+
+<%= link_to 'Edit', edit_operadora_path(@operadora) %> |
+<%= link_to 'Back', operadoras_path %>
